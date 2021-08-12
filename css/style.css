@@ -1,17 +1,13 @@
 @charset "UTF-8";
-*{
+
+* {
     box-sizing: border-box;  
-/*    background-color: #ece0cf;   */
 }
 
 body header {
-    position: fixed;
+    /*position: fixed;*/  
     width: 100%;
 } 
-
-body header nav p {
-    text-align: center;
-}
 
 #nav-list {
     text-align: center;
@@ -28,22 +24,21 @@ body header nav p {
     text-decoration: none;
 }
 
-#nav-list dt {
-    background: #adad85;
+.nav-list dt {
+    background: #8585ad;
 }
 
-#nav-list dd {
+.nav-list dd {
     background: #eee;
-    /*border: solid 1px #aaa; */
     display: none;
     text-align: center;
 }
 
 .nav-toggle {
-    position: relative;
+    position: fixed;
     width: 1.75rem;
     height: 1.5rem;
-    top: 3px;
+    top: 5px;
     left: 3px;
     padding: 0%;
     border: none;
@@ -132,11 +127,78 @@ body header nav p {
 }
 
 /* youtube.html */
-.slideshow {
+.yt_search.show {
+    visibility: visible;
+}
+
+.yt_search {
+    visibility: hidden;
+}
+
+.yt_slideshow {
     width: 500px;
     margin: auto;
 }
 
-.slideshow img {
+.yt_slideshow img {
     width: 100%;
 }
+
+/*  dailymotion.html */
+.dm_search.show {
+    visibility: visible;
+    background-color: red;
+    margin-top: 30%;
+}
+
+.dm_search {
+    visibility: hidden;
+    background-color: red;
+}
+
+.dm_slideshow {
+    width: 500px;
+    margin: auto;
+}
+
+.dm_slideshow img {
+    width: 100%;
+}
+
+/*  contact.html */
+#contact {
+    position: absolute;
+    margin-top: 0%;
+}
+
+.contact {
+    visibility: hidden;
+}
+
+.contact.show {
+    padding-top: 7%;
+    padding-left: 37%;
+    font-size: 1.0em;
+    visibility: visible;
+}
+
+.contact.show label,
+.contact.show input,
+.contact.show textarea, 
+.contact.show div {
+    margin: 5%;
+}
+
+.contact.show p {
+    font-size: 0.8em;
+    line-height: 0.1em;
+}
+
+#username,
+#email    {
+    width: 100%;
+}
+
+
+
+

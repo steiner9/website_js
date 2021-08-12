@@ -14,27 +14,31 @@
   </head>
   <body>
     <header>
-        <nav class="hamburger-nav youtube">
+        <nav class="hamburger-nav">
             <button type="button" id="nav-toggle" class="nav-toggle">
             <i></i>
             <i></i>
             <i></i> 
             </button>
-            <p class="title-toggle show">youtube</p>
-            <form>
-                <label>youtube video search</label><br>
-                <input type="text" id="yt_search" name="yt_keyword">
-                <input type="button" id="btn" value="search"><br>
-            </form>
-            <ul id="nav-list" class="nav-list">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="youtube.html">youtube</a></li>
-                <li><a href="dailymotion.html">dailymotion</a></li>
-            </ul>
+            <h3 class="title-toggle show">youtube</h3>
+            <div class="yt_search show">
+                <form>
+                    <label>youtube video search</label><br>
+                    <input type="text" id="yt_keyword" name="yt_keyword">
+                    <input type="button" id="btn" value="search"><br>
+                </form>
+            </div>
+            <dl id="nav-list" class="nav-list">
+                <dt>menu</dt>
+                <dd><a href="index.html">HOME</a></dd>
+                <dd><a href="youtube.html">youtube</a></dd>
+                <dd><a href="dailymotion.html">dailymotion</a></dd>
+                <dd><a href="contact.html">contact</a></dd>
+            </dl>
         </nav>
     </header>
     <main>
-        <div class="slideshow">
+        <div class="yt_slideshow">
             <div></div>
             <div></div>
             <div></div>
@@ -49,7 +53,7 @@
     </main>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
-    <script src="js/yt_app.js"></script>
+    <script src="js/youtube.js"></script>
   </body>
 </html>
 

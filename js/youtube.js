@@ -24,27 +24,25 @@ url2 += '&videoSyndicated=true'; // youtube.com 以外で再生できる動画�
 url2 += '&maxResults=10';         // 動画の最大取得件数
 url2 += '&key=' + KEY;           // API KEY
 
-let thumbNail = new Array();             // サムネイルのURL
 let videoList = new Array();
 
 $('#btn').on('click', function() {
     $.ajax({
-        url: url1 + $('#yt_search').val() + url2, 
+        url: url1 + $('#yt_keyword').val() + url2, 
         dataType : 'jsonp',
     }).done(function(data) {
         if (data.items) {
             setData(data);
-            // console.log(thumbNail);
-            // console.log(videoList);
+            //console.log(videoList);
             
             for (let i = 0; i < videoList.length; i++) {
                 $('.yt_slideshow div').html(videoList[i]);
-                console.log($('.yt_slideshow div'));
-            }
+                console.log(videoList[i]);
+            };
             $(function () {
                 $('.yt_slideshow').slick({
-                    // autoplay: true;
-                    // autoplaySpeed: 3000;
+                    //autoplay: true,
+                    //autoplaySpeed: 3000,
                     dots: true
                 });
             });
@@ -57,39 +55,13 @@ $('#btn').on('click', function() {
 }); 
 
 let setData = (data) => {
-
     for (let i = 0; i < data.items.length; i++) {
         let video = '';
-        let result = '';
-        let thumbNailUrl = '';
         
         video  = '<iframe src="https://www.youtube.com/embed/';
         video += data.items[i].id.videoId;
         video += '" allowfullscreen></iframe>';
-        result += '<div class="video">' + video + '</div>';
-        thumbNailUrl = 'http://img.youtube.com/vi/' + data.items[i].id.videoId + '/mqdefault.jpg';
-        videoList.push(result);
-        thumbNail.push(thumbNailUrl);
+        videoList.push(video);
     }
 };
-
-// form of contact.html
-window.addEventListener('load', function () {
-    let textarea = document.getElementById('message');
-
-    let maxTextNum = textarea.getAttribute('maxlength');
-
-    let textMessage = document.createElement('div');
-    let parent = textarea.parentElement;
-    parent.insertBefore(textMessage, textarea);
-
-    textarea.addEventListener('keyup', function() {
-        let currentTextNum = textarea.value.length;
-        if (currentTextNum === 0 || currentTextNum === 1) {
-            textMessage.innerHTML = '<p>Now you wrote ' + String(currentTextNum) + ' character. <br><p>You can write another ' + String(maxTextNum - currentTextNum) + 'characters.</p>'
-        } else {
-            textMessage.innerHTML = '<p>Now you wrote ' + String(currentTextNum) + ' characters. <br><p>You can write another ' + String(maxTextNum - currentTextNum) + 'characters.</p>'};
-
-    });
-});
 

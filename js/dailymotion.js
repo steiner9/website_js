@@ -2,7 +2,7 @@
 
 // humburger-menu
 $('.nav-toggle').on('click', function() {
-    $('.nav-toggle, .nav-list, .title-toggle, .yt_search, .contact').toggleClass('show');
+    $('.nav-toggle, .nav-list, .title-toggle, .dm_search, .contact').toggleClass('show');
 });
 
 // dropdown-menu
@@ -72,24 +72,3 @@ let setData = (data) => {
         thumbNail.push(thumbNailUrl);
     }
 };
-
-// form of contact.html
-window.addEventListener('load', function () {
-    let textarea = document.getElementById('message');
-
-    let maxTextNum = textarea.getAttribute('maxlength');
-
-    let textMessage = document.createElement('div');
-    let parent = textarea.parentElement;
-    parent.insertBefore(textMessage, textarea);
-
-    textarea.addEventListener('keyup', function() {
-        let currentTextNum = textarea.value.length;
-        if (currentTextNum === 0 || currentTextNum === 1) {
-            textMessage.innerHTML = '<p>Now you wrote ' + String(currentTextNum) + ' character. <br><p>You can write another ' + String(maxTextNum - currentTextNum) + 'characters.</p>'
-        } else {
-            textMessage.innerHTML = '<p>Now you wrote ' + String(currentTextNum) + ' characters. <br><p>You can write another ' + String(maxTextNum - currentTextNum) + 'characters.</p>'};
-
-    });
-});
-

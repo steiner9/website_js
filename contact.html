@@ -18,7 +18,6 @@
             <i></i>
             <i></i> 
             </button>
-            <h3 class="title-toggle show">video  search</h3>
             <dl id="nav-list" class="nav-list">
                 <dt>menu</dt>
                 <dd><a href="index.html">HOME</a></dd>
@@ -28,8 +27,20 @@
             </dl>
         </nav>
     </header>
+    <main>
+    <h2 class="title-toggle show">contact</h2>
+    <form action="" id="contact" class="contact show" method="post">
+        <label for="name">name: </label>
+        <input type="text" id="username" name="username"> <br>
+        <label for="email">email: </label>
+        <input type="email" id="email" name="email"> <br>
+        <label for="message">message: </label><br>
+        <textarea id="message" name="message" cols="30" rows="20" maxlength="600"></textarea><br>  
+        <input type="submit" value="submit">
+    </form>
+    </main>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
 

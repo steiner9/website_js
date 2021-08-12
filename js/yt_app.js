@@ -2,7 +2,7 @@
 
 // humburger-menu
 $('.nav-toggle').on('click', function() {
-    $('.nav-toggle, .nav-list, .title-toggle').toggleClass('show');
+    $('.nav-toggle, .nav-list, .title-toggle, .yt_search').toggleClass('show');
 });
 
 // youtube search
@@ -31,11 +31,11 @@ $('#btn').on('click', function() {
             // console.log(videoList);
             
             for (let i = 0; i < videoList.length; i++) {
-                $('.slideshow div').html(videoList[i]);
-                console.log($('.slideshow div'));
+                $('.yt_slideshow div').html(videoList[i]);
+                console.log($('.yt_slideshow div'));
             }
             $(function () {
-                $('.slideshow').slick({
+                $('.yt_slideshow').slick({
                     // autoplay: true;
                     // autoplaySpeed: 3000;
                     dots: true
