@@ -33,3 +33,15 @@ window.addEventListener('load', function () {
     });
 });
 
+// css animation
+const CLASSNAME = "-visible";
+const TIMEOUT = 1500;
+const DELAY = 100;
+const $target1 = $(".title-toggle.show");
+
+setInterval(() => {
+  $target1.addClass(CLASSNAME);
+  setTimeout(() => {
+    $target1.removeClass(CLASSNAME);
+  }, TIMEOUT);
+}, TIMEOUT * 2);
