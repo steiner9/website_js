@@ -2,7 +2,7 @@
 
 // humburger-menu
 $('.nav-toggle').on('click', function() {
-    $('.nav-toggle, .nav-list, .title-toggle, .yt_search, .contact').toggleClass('show');
+    $('.nav-toggle, .nav-list, .title-toggle, .yt_search, .contact, .airmoto').toggleClass('show');
 });
 
 // dropdown-menu
@@ -39,6 +39,7 @@ $('#btn').on('click', function() {
                 $('.yt_slideshow div').html(videoList[i]);
                 console.log(videoList[i]);
             };
+            /*
             $(function () {
                 $('.yt_slideshow').slick({
                     //autoplay: true,
@@ -46,6 +47,7 @@ $('#btn').on('click', function() {
                     dots: true
                 });
             });
+            */
         } else {
             alert('該当するデータが見つかりませんでした');
         }

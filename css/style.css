@@ -70,7 +70,7 @@ body header {
 }
 
 .nav-toggle.show {
-    background:  rgba(125, 125, 125, 0.95);
+  /*  background:  rgba(125, 125, 125, 0.95); */
 }
 
 .nav-toggle.show i:nth-child(1) {
@@ -91,9 +91,23 @@ body header {
 
 .title-toggle.show{
     text-align: center;
-    margin-top: 5%;
+    padding-top: 10%;
     font-size: 1.0em;
     visibility: visible;
+    overflow: hidden;
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1.0s;
+}
+
+.title-toggle.show span {
+  display: block;
+  transform: translate(100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1.0s;
+}
+
+.title-toggle.show.-visible,
+.title-toggle.show.-visible span {
+  transform: translate(0, 0);
 }
 
 .nav-list {
@@ -106,7 +120,7 @@ body header {
     list-style: none;
     margin: 0;
     padding: 60px 0 30px;
-    background:  rgba(125, 125, 125, 0.95);
+  /*  background:  rgba(125, 125, 125, 0.95);  */
     text-align: center;
     opacity: 0;
     visibility: hidden;
@@ -129,6 +143,12 @@ body header {
 /* youtube.html */
 .yt_search.show {
     visibility: visible;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+ 
+#yt_keyword {
+    margin-top: 3%;
 }
 
 .yt_search {
@@ -167,7 +187,7 @@ body header {
 
 /*  contact.html */
 #contact {
-    position: absolute;
+    position: absolute; 
     margin-top: 0%;
 }
 
@@ -199,6 +219,11 @@ body header {
     width: 100%;
 }
 
+#submit {
+    background: #7f6666;
+    color: #ffffff;
+    border-radius: 1px;
+}
 
 
 
