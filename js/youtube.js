@@ -36,10 +36,9 @@ $('#btn').on('click', function() {
             //console.log(videoList);
             
             for (let i = 0; i < videoList.length; i++) {
-                $('.yt_slideshow div').html(videoList[i]);
-                console.log(videoList[i]);
+                $('.v' + String(i)).html(videoList[i]);
+                // console.log(videoList[i]);
             };
-            /*
             $(function () {
                 $('.yt_slideshow').slick({
                     //autoplay: true,
@@ -47,7 +46,6 @@ $('#btn').on('click', function() {
                     dots: true
                 });
             });
-            */
         } else {
             alert('該当するデータが見つかりませんでした');
         }

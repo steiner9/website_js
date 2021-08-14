@@ -17,7 +17,6 @@ const CLASSNAME = "-visible";
 const TIMEOUT = 1500;
 const DELAY = 100;
 const $target1 = $(".title-toggle.show");
-const $target2 = $(".sentence");
 
 setInterval(() => {
   $target1.addClass(CLASSNAME);
